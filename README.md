@@ -63,5 +63,10 @@ python.exe .\AIstory-tester.py
 
 - LoRA でチューニング
 
+# ライセンス
+
+MIT
+
 # 謝意
-すばらしいモデルを公開されたAI BunCho様に改めて感謝いたします。
+
+すばらしいモデルを公開された AI BunCho 様に改めて感謝いたします。

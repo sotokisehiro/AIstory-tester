@@ -1,7 +1,9 @@
 # AIstory-tester
 
-AIcuncho 様が公開された文章特化型 LLM モデルをあれこれ試すためのテストコードです。  
+AIbuncho 様が公開された文章特化型 LLM モデルをあれこれ試すためのテストコードです。  
 Windows ＆ CUDA 環境が必要です。
+
+https://huggingface.co/AIBunCho/japanese-novel-gpt-j-6b
 
 # インストール手順
 

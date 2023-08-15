@@ -1,7 +1,10 @@
 # AIstory-tester
 
 [AIbuncho 様](https://huggingface.co/AIBunCho/japanese-novel-gpt-j-6b)
-が公開された小説特化型 LLM モデルをあれこれ試すためのテストコードです。  
+が公開された小説特化型 LLM モデル「AIBunCho/japanese-novel-gpt-j-6b」をあれこれ試すためのテストコードです。
+
+# 要件
+
 実行には Windows ＆ NVIDIA 環境が必須で、VRAM は(4bit 量子化しても)最低 8GB 必要です。
 
 # インストール手順

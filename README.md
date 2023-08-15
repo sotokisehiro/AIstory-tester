@@ -69,4 +69,6 @@ MIT
 
 # 謝意
 
-すばらしいモデルを公開された AI BunCho 様に改めて感謝いたします。
+- すばらしいモデルを公開された AI BunCho 様に改めて感謝いたします。
+
+- [「AI Buncho モデルで何か物語めいたものを生成する」](https://note.com/shi3zblog/n/n0eb77bae5a8a) shi3z 様の note 記事が大変参考になりました。

@@ -1,6 +1,6 @@
 # AIstory-tester
 
-[AIbuncho 様](https://huggingface.co/AIBunCho/japanese-novel-gpt-j-6b)
+[AIBunCho 様](https://huggingface.co/AIBunCho/japanese-novel-gpt-j-6b)
 が公開された小説特化型 LLM モデル「AIBunCho/japanese-novel-gpt-j-6b」をあれこれ試すためのテストコードです。
 
 # 要件
@@ -62,3 +62,6 @@ python.exe .\AIstory-tester.py
 # ToDo
 
 - LoRA でチューニング
+
+# 謝意
+すばらしいモデルを公開されたAI BunCho様に改めて感謝いたします。

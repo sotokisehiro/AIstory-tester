@@ -15,7 +15,7 @@
 
 Python の実行環境と CUDA ドライバは事前に導入しておいてください。
 
-1.適当なフォルダを作成し、PowerShell 等から次のコマンドを実行してください。
+適当なフォルダを作成し、PowerShell 等から次のコマンドを実行してください。
 
 ```
 pip install -r requirements.txt
@@ -77,3 +77,5 @@ MIT
 - すばらしいモデルを公開された AI BunCho 様に改めて感謝いたします。
 
 - [「AI Buncho モデルで何か物語めいたものを生成する」](https://note.com/shi3zblog/n/n0eb77bae5a8a) shi3z 様の note 記事が大変参考になりました。
+
+- [「Google Colab で Rinna-3.6B の LoRA ファインチューニングを試す」](https://note.com/npaka/n/nc387b639e50e) npaka 様の note 記事を参考にして LoRA アダプタを作成しました。

@@ -13,5 +13,6 @@
   "maxloop": 10,
   "maxlength": 1500,
   "maxwait": 5,
+  "loratest": "False",
   "end": 0
 }

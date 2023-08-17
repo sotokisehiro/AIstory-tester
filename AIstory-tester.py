@@ -7,6 +7,7 @@ import datetime
 from tqdm import tqdm
 import json
 import argparse
+from peft import PeftModel
 
 
 # 生成関数本体
@@ -17,7 +18,7 @@ def b(prompt):
         return_tensors="pt"
     ).cuda()
     tokens = model.generate(
-        input_ids.to(device=model.device),
+        input_ids=input_ids.to(device=model.device),
         max_new_tokens=d["max_new_tokens"],
         temperature=d["temperature"],
         top_p=d["top_p"],
@@ -90,6 +91,7 @@ model.eval()
 #     model = model.to("cuda")
 
 endless = True
+eval_flag = False
 
 while endless:
     try:
@@ -106,11 +108,26 @@ while endless:
             d["シード"] = first_seed
         torch.manual_seed(first_seed)
 
+        if eval_flag is False:
+            if d.get("loratest") is not None:
+                if d["loratest"] is True:
+                    # LoRAモデルの準備
+                    model = PeftModel.from_pretrained(
+                        model,
+                        "sehiro/akanetalk-lora",
+                        load_in_4bit=True,
+                        device_map='auto',
+                        torch_dtype=torch.float32,
+                    )
+                    print("LoRA test enable.")
+            model.eval()
+            eval_flag = True
+
         # 指定文字数を超えるか、または指定回数を超えるまでまで生成を続ける
         print("Making start.")
 
         output = seed_prompt
-        i = 0
+
         maxloop = d["maxloop"]
         maxlength = d["maxlength"]
         for i in tqdm(range(maxloop), desc="Generate"):
@@ -118,7 +135,6 @@ while endless:
             seed = int(time.time())
             torch.manual_seed(seed)
 
-            i += 1
             # GPU負荷調整のためのwait時間（秒）
             # 生成速度が落ちるため、可能なら設定時間を短くすること
             # 0以下ならsleepしない

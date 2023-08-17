@@ -9,6 +9,8 @@
 
 ※8/17 Linux/wsl にも仮対応しました。wsl では動作確認まで完了していますが、Linux の確認はまだ取れていません。（多分今回の修正で動くはず）
 
+※8/18 設定項目に「loratest」を追加しました。True にすると「あかねと～く」LoRA を読み込むようになります。女性のセリフに影響が出たり、妹が出現しやすくなったりするようです。
+
 # インストール手順
 
 Python の実行環境と CUDA ドライバは事前に導入しておいてください。
@@ -49,6 +51,7 @@ python.exe .\AIstory-tester.py
   "maxloop": 10,
   "maxlength": 1500,
   "maxwait": 5,
+  "loratest": "False",
   "end": 0
 }
 ```
